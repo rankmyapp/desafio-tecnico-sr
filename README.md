@@ -9,9 +9,8 @@ Este documento descreve o desafio ao candidato para a vaga de Full Stack Sr - Ra
 * Poderá utilizar uma das seguintes linguages de Programação ou Plataformas de Execução: Node.js ou GoLang
 * Utilização de containers (Docker) é primordial para a avaliação.
 * Em relação aos dados, estes poderão ser armazenados em memória durante a execução do desafio ou em banco de dados (relacional, não-relacional, chave-valor etc.). Escolha o que achar que faz mais sentido para o problema.
-* O código produzidor deverá ser enviado com um PR para o repositório em questão.
 * Escreva um README.md (Markdown) para documentar a aplicação, configuração do ambiente, execução e build.
-* Ao finalizar o exercicio, executar corretamente.
+* Ao finalizar o desafio e o executar corretamente, o código produzidor deverá ser enviado com um PR para o repositório em questão, no seguinte padrão `<GITHUB_USERNAME>/fullstack-challenge`
 
 ## Desafio
 
