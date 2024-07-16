@@ -30,7 +30,7 @@ Considerações gerais:
 | VIP                   | 2     |
 | Golden Circle         | 1     |
 
-
+* Ao realizar uma venda deverá ser publicada uma mensagem para um sistema validador através de uma fila, chamada "validate-purchase".
 
 #### Endpoints
 
