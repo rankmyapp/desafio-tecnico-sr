@@ -1,9 +1,8 @@
-# Desafio Tecnico Full Stack Sr - 2024
-
 <div align="center">
   <br>
   <img src="https://yt3.ggpht.com/SwG0Lofb6Qx5p3kHTWDLkIqJo2vly7dpAAwk2_CKb_Resx2TLc5DSfPsU37jfjqpcGs7lTFV=s900-c-k-c0x00ffffff-no-rj" alt="RankMyApp" width="200">
   <br />
+  <h1 style="font-size: 38px;"># Desafio Tecnico Full Stack Sr - 2024</h1>
 </div>
 
 
