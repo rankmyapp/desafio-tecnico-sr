@@ -37,4 +37,4 @@ A sua solução será avaliada durante a execução do desafio (Live Coding) e p
 
 Desejamos todo sucesso a você candidato e esperamos que você se divirta codificando essa solução. Qualquer duvida sobre o desafio pode ser levantada no momento da aplicação do desafio em conjunto com o avaliador no momento.
 
-Bom código! ;)
+Bom código! 😄⚡
