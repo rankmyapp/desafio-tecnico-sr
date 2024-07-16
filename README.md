@@ -1,5 +1,12 @@
 # Desafio Tecnico Full Stack Sr - 2024
 
+<div align="center">
+  <br>
+  <img src="https://yt3.ggpht.com/SwG0Lofb6Qx5p3kHTWDLkIqJo2vly7dpAAwk2_CKb_Resx2TLc5DSfPsU37jfjqpcGs7lTFV=s900-c-k-c0x00ffffff-no-rj" alt="RankMyApp" width="200">
+  <br />
+</div>
+
+
 Este documento descreve o desafio ao candidato para a vaga de Full Stack Sr - RankyMyApp
 
 ## Considerações sobre o desafio
