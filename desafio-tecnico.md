@@ -23,6 +23,7 @@ Considerações gerais:
 * Aceitaremos apenas pagamento por cartão de crédito.
 
 * No estoque teremos um limite de Tickets disponíveis, ao se atingir de tickets vendidos a API não deverá permitir registrar uma venda.
+
 | Ticket                | *QTD* |
 | ----------------------| ----- |
 | Área Geral            | 10    |
