@@ -9,12 +9,12 @@ um API de Vendas de Tickets para um esse Show.
 
 Considerações gerais:
 
-* Tipos de Ticket (Área Geral, Arquibancada, VIP, Golden Circle)
+* Tipos de Ticket (General Area, Grandstand, VIP, Golden Circle)
 
 | Ticket                | *R$* |
 | ----------------------| ---- |
-| Área Geral            | 95   |
-| Arquibancada          | 175  |
+| General Area          | 95   |
+| Grandstand            | 175  |
 | VIP                   | 750  |
 | Golden Circle         | 1250 |
 
@@ -26,8 +26,8 @@ Considerações gerais:
 
 | Ticket                | *QTD* |
 | ----------------------| ----- |
-| Área Geral            | 10    |
-| Arquibancada          | 5     |
+| General Area          | 10    |
+| Grandstand            | 5     |
 | VIP                   | 2     |
 | Golden Circle         | 1     |
 
