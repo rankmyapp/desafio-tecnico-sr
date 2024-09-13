@@ -1,64 +1,83 @@
-# Desafio Técnico - Desenvolvedor Frontend (React)
+# Teste Técnico - Desenvolvedor Júnior Backend (Node.js)
 
 ## Objetivo
 
-O objetivo deste teste é avaliar suas habilidades práticas de desenvolvimento com React, HTML, CSS, e JavaScript. Você será responsável por criar uma aplicação simples que consuma uma API, exiba os dados de forma organizada e interativa, e tenha um design responsivo.
+Este teste tem como objetivo avaliar suas habilidades em desenvolvimento backend utilizando Node.js. Você deverá desenvolver uma API RESTful simples, que permita realizar operações de CRUD (Create, Read, Update, Delete) sobre um recurso de **usuários**.
 
-Você deverá criar uma aplicação React que exiba uma lista de naves espaciais consumida de uma API pública (Star Wars). A aplicação deve ter as seguintes funcionalidades:
+1. Fork este repositório (ou crie um novo) e, ao finalizar, envie o link do repositório para a avaliação.
+2. Você deverá utilizar **Node.js** puro com **Express.js**, **Fastify.js**.
+3. O banco de dados pode ser **MongoDB** ou **PostgreSQL** ou **MySQL**.
+4. Utilize **JWT** para autenticação e proteção de rotas.
+5. Inclua testes unitários para as principais funcionalidades da aplicação.
+6. O uso de bibliotecas populares como **Yup** para validação de dados e **Mongoose** (caso use MongoDB) é recomendado, mas não obrigatório.
+7. Escreva um Dockerfile
+8. Escreva uma stack de serviços com Docker Compose
 
-### Requisitos Funcionais
+## Requisitos do Projeto
 
-Considerações gerais:
+### Funcionalidades da API:
 
-1. **Listagem de Naves Espaciais**:
+1. **Registrar Usuário (Sign Up)**
 
-   - Faça uma requisição HTTP para a API pública: `https://swapi.dev/` e exiba as starshipts em uma lista.
-   - Cada item da lista será um card e deverá mostrar o máximpo de informações de uma starship (nave espacial).
+   - Rota: `POST /api/auth/signup`
+   - Campos obrigatórios: `nome`, `email`, `senha`
+   - Validação:
+     - O campo `email` deve ser único.
+     - A senha deve ter no mínimo 6 caracteres.
 
-2. **Detalhes de uma Nave Espacial**:
+2. **Buscar Usuário Autenticvado**
 
-   - Ao clicar em uma starshit da lista, exibir uma modal com mais detalhes sobre a nave espacial.
+   - Rota: `GET /api/account/me`
+   - Deve retornar os dados do usuário especificado pelo `id`.
 
-3. **Filtragem de Naves Espaciais**:
+3. **Atualizar Informações do Usuário Autenticado**
 
-   - Adicione um campo de busca para filtrar as naves espaciais pelo nome, modelo enquanto o usuário digita no campo de pesquisa.
+   - Rota: `PUT /api/account/profile`
+   - Permite atualizar os dados de um usuário específico.
 
-4. **Responsividade**:
+4. **Cancelar a conta do usuṕario Usuário**
+   - Rota: `DELETE /api/account/cancel`
+   - Permite remover um usuário específico.
 
-   - A interface deve ser completamente responsiva e funcionar bem em diferentes tamanhos de tela (mobile, tablet e desktop).
+### Regras de Autenticação:
 
-5. **Componentização**:
+- Apenas usuários autenticados podem acessar as rotas de listagem, busca, atualização e remoção de usuários.
+- Utilize JWT para gerar e validar tokens de autenticação.
+- Rota para login:
+- **Login**
+- Rota: `POST /api/signin`
+- Parâmetros: `email`, `senha`
+- Retorna: Token JWT válido para autenticação.
 
-   - Quebre o layout e ou as funcionalidades em pequenos componentes
+### Requisitos Extras (Bônus):
 
-6. **Testes**:
-   - Desenvolva ao menos um teste unitário para algum componente
+- **Paginação**: Implementar paginação na listagem de usuários.
+- **Filtros de Pesquisa**: Permitir a busca de usuários por nome ou e-mail através de query params.
+- **Log de Erros**: Implementar um sistema básico de log de erros.
 
-### Requisitos Técnicos
+---
 
-- **React**: Utilize o React para estruturar a aplicação e componentes funcionais.
-- **Hooks**: Utilize hooks para gerenciar o estado e efeitos colaterais (life cycle).
-- **CSS**: O layout deve ser implementado com CSS, seja usando arquivos CSS simples ou bibliotecas como Styled Components.
-- **Requisição HTTP**: Você pode usar `fetch` ou `axios` para fazer as requisições à API.
-- **Gerenciamento de Estado Global** (Opcional): Se quiser demonstrar habilidades extras, implemente um sistema simples de gerenciamento de estado global (por exemplo, com Context API, Redux, Zustand, Atom ou outro).
+## Testes Unitários
 
-## Entrega
+Implemente testes para as principais funcionalidades da API, utilizando um framework de testes como **Jest** ou **Mocha**:
 
-- **Fork** este repositório ou crie um novo em seu GitHub.
-- Implemente a solução e faça os commits com a sua evolução.
-- Após finalizar, envie o link do repositório e, se possível, o link da aplicação rodando (você pode usar o [Vercel](https://vercel.com/) ou [Netlify](https://www.netlify.com/)).
+- Teste as rotas na autenticação, atualização e deleção de conta.
+- Teste a autenticação JWT (Opcional).
+- Teste a validação de dados (como e-mail único e tamanho da senha).
 
-## Critérios de Avaliação
+---
 
-1. **Funcionamento**: A aplicação atende a todos os requisitos funcionais?
-2. **Código Limpo**: O código está organizado, com boa legibilidade, boas práticas e comentários, quando necessário?
-3. **Componenteização**: A aplicação está dividida em componentes reutilizáveis e bem estruturados?
-4. **Uso dos Hooks**: O candidato utilizou corretamente `useState`, `useEffect` e outros hooks, se necessário?
-5. **Responsividade**: A aplicação se adapta bem a diferentes tamanhos de tela?
-6. **Estilização**: O design da interface é agradável, funcional e utiliza boas práticas de CSS?
-7. **Extras**: Se você implementar funcionalidades extras (como gerenciamento de estado global ou testes unitários), será considerado um diferencial.
+## O que será avaliado:
 
-## Dicas
+- Estrutura e organização do código.
+- Boas práticas na implementação da API (RESTful, uso correto de status HTTP, etc.).
+- Conhecimento de autenticação com JWT.
+- Validação e tratamento de erros.
+- Implementação de testes unitários.
+- Documentação básica da API (ex.: README com instruções de uso).
 
-- Use commits pequenos e frequentes para mostrar a progressão do trabalho.
-- Faça uso de boas
+---
+
+## Entrega:
+
+Ao finalizar o teste, por favor envie um link para o repositório GitHub com o código desenvolvido.
