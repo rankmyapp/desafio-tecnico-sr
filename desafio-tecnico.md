@@ -2,42 +2,49 @@
 
 ## Objetivo
 
-Este teste tem como objetivo avaliar suas habilidades em desenvolvimento backend utilizando Node.js. Você deverá desenvolver uma API RESTful simples, que permita realizar operações de CRUD (Create, Read, Update, Delete) sobre um recurso de **usuários**.
+Este teste tem como objetivo avaliar suas habilidades em desenvolvimento microserviços utilizando Node.js. 
+
+Você deverá desenvolver um serviço que terá uma API REST simples, que irá realizar alguma das operações de CRUD como (Create, Read, Update, Delete) sobre um recurso de **usuários**. e um serviço que irá receber uma mensagem via fila e irá enviar enviar um e-mail
 
 1. Fork este repositório (ou crie um novo) e, ao finalizar, envie o link do repositório para a avaliação.
-2. Você deverá utilizar **Node.js** puro com **Express.js**, **Fastify.js**.
+2. Você deverá utilizar **Node.js** puro com **Express.js**, **Fastify.js**, para criação dos serviços
 3. O banco de dados pode ser **MongoDB** ou **PostgreSQL** ou **MySQL**.
 4. Utilize **JWT** para autenticação e proteção de rotas.
 5. Inclua testes unitários para as principais funcionalidades da aplicação.
 6. O uso de bibliotecas populares como **Yup** para validação de dados e **Mongoose** (caso use MongoDB) é recomendado, mas não obrigatório.
 7. Escreva um Dockerfile
-8. Escreva uma stack de serviços com Docker Compose
+8. Escreva uma stack de serviços com Docker Compose, contemplando os serviços que você irá precisar.
+9. Crie conexão com o RabbitMQ, para envio na fila `email-queue` que o serviço de e-mail irá receber e disparar um e-mail
 
 ## Requisitos do Projeto
 
-### Funcionalidades da API:
+### Funcionalidades do Serviço de E-mail:
+
+1. **Enviar um e-mail de Bem vindo ao Usuário (Sign Up)**
+   - Conectar no RabbitMQ
+   - Receber um mensagens (consumer) de envio de e-mail na fila `email-queue`
+   - Enviar e-mail via SMTP
+
+### Funcionalidades do Serviço de Autenticação:
 
 1. **Registrar Usuário (Sign Up)**
-
    - Rota: `POST /api/auth/signup`
    - Campos obrigatórios: `nome`, `email`, `senha`
    - Validação:
      - O campo `email` deve ser único.
      - A senha deve ter no mínimo 6 caracteres.
 
-2. **Buscar Usuário Autenticvado**
-
+2. **Buscar Usuário Autenticado**
    - Rota: `GET /api/account/me`
    - Deve retornar os dados do usuário especificado pelo `id`.
 
-3. **Atualizar Informações do Usuário Autenticado**
-
-   - Rota: `PUT /api/account/profile`
-   - Permite atualizar os dados de um usuário específico.
-
-4. **Cancelar a conta do usuṕario Usuário**
-   - Rota: `DELETE /api/account/cancel`
+3. **Autenticar um usuário**
+   - Rota: `POST /api/auth/signin`
    - Permite remover um usuário específico.
+
+4. **Envio do e-mail de bem vindo**
+   - Conectar no RabbitMQ
+   - Enviar uma mensagem (producer) de envio do e-mail na fila `email-queue` para novos usuários
 
 ### Regras de Autenticação:
 
