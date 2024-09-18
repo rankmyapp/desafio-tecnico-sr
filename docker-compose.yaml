@@ -21,5 +21,11 @@ services:
             - 15672:15672
         networks:
             - default-services
+    mongodb:
+        image: mongo
+        networks:
+        - default-services
+        ports:
+        - 27019:27017
 networks:
     default-services:
